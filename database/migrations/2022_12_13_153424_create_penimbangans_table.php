@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('penimbangans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('balita_id')->constrained();
-            // $table->foreignId('imunisasi_id')->constrained();
-            // $table->foreignId('vitamin_id')->constrained();
-            // $table->foreignId('bidan_id')->constrained();
+            $table->foreignId('imunisasi_id')->constrained();
+            $table->foreignId('vitamin_id')->constrained();
+            $table->foreignId('bidan_id')->constrained();
             $table->string('tgl_timbang');
             $table->string('usia_balita');
             $table->string('bb');
