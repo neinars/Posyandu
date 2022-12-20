@@ -20,13 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'username',
-        'NIK',
         'email',
         'password',
-        'address',
-        'phone',
-        'jk',
-        'age',
     ];
 
     /**
@@ -47,4 +42,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Pengunjung(){
+        return $this->hasOne(Pengunjung::class);
+    }
+    public function Role(){
+        return $this->belongsToMany(Role::class);
+    }
+
 }

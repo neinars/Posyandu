@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('tgl_laporan');
             $table->string('keterangan');
             $table->boolean('is_approve')->default(false);
-            $table->integer('approve_by');
+            $table->string('approve_by');
             $table->string('approve_date');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('penimbangan_id')->constrained();

@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('pengunjungs', function (Blueprint $table) {
             $table->id();
-            $table->string('role_name');
+            $table->string('name');
+            $table->string('NIK', 16)->unique();
+            $table->string('address');
+            $table->string('phone');
+            $table->enum('jk', ['Laki-laki', 'Perempuan']);
+            $table->string('age');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('pengunjungs');
     }
 };
