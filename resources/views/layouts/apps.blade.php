@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Kemuning - Posyandu</title>
     
     <link rel="stylesheet" href="assets/css/main/app.css">
     <link rel="stylesheet" href="assets/css/main/app-dark.css">
@@ -43,7 +43,7 @@
             
             <li
                 class="sidebar-item active ">
-                <a href="index.html" class='sidebar-link'>
+                <a href="/" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Dashboard</span>
                 </a>
@@ -53,14 +53,29 @@
                 class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-stack"></i>
-                    <span>Components</span>
+                    <span>Data</span>
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="component-alert.html">Alert</a>
+                        <a href="/balita">Balita</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="component-badge.html">Badge</a>
+                        <a href="">Pemeriksaan</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="">Pemeriksaan</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="">Pemeriksaan</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="">Pemeriksaan</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="">Pemeriksaan</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="">Pemeriksaan</a>
                     </li>
                 </ul>
             </li>

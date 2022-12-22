@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('dashboard');
+    return view('dashboard', [
+        "title" => "Dashboard"
+    ]);
 });
 
-Auth::routes();
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();Route::middleware(['auth', 'role:Admin'])->prefix('masyarakat')->group(function () {
+Route::get('/balita', [App\Http\Controllers\Admin\BalitaController::class, 'index'])->name('balita.index');
+});
