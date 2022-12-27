@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Pengunjung;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BalitaController extends Controller
+use function Ramsey\Uuid\v1;
+
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class BalitaController extends Controller
      */
     public function index()
     {
-        return view('balita.index');
+        return view('pengunjung.dashboard');
     }
 
     /**
@@ -41,17 +43,10 @@ class BalitaController extends Controller
     /**
      * Display the specified resource.
      *
-<<<<<<< HEAD
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-=======
-     * @param  \App\Models\Balita  $balita
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Balita $balita)
->>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
     {
         //
     }
@@ -59,17 +54,10 @@ class BalitaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-<<<<<<< HEAD
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-=======
-     * @param  \App\Models\Balita  $balita
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Balita $balita)
->>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
     {
         //
     }
@@ -78,17 +66,10 @@ class BalitaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-<<<<<<< HEAD
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-=======
-     * @param  \App\Models\Balita  $balita
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Balita $balita)
->>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
     {
         //
     }
@@ -96,17 +77,10 @@ class BalitaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-<<<<<<< HEAD
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-=======
-     * @param  \App\Models\Balita  $balita
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Balita $balita)
->>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
     {
         //
     }

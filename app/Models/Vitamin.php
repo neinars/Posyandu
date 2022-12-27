@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Vitamin extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'jenis_vitamin',
+        'keterangan'
+    ];
+
+    public function penimbangans(){
+        return $this->hasMany(Penimbangan::class);
+    }
 }

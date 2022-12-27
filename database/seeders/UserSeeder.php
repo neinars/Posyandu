@@ -2,12 +2,19 @@
 
 namespace Database\Seeders;
 
+<<<<<<< HEAD
 use App\Models\Pengunjung;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 use App\Models\RoleUser;
 use App\Models\User;
+=======
+use App\Models\User;
+use App\Models\UserRole;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+>>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
@@ -19,6 +26,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         $roleadmin = Role::create([
             'role_name' => 'Admin',
         ]);
@@ -68,6 +76,42 @@ class UserSeeder extends Seeder
         RoleUser::create([
             'user_id' => $user->id,
             'role_id' => $pengunjung->id,
+=======
+        User::create([
+            'name' => 'Adminid',
+            'username' => 'adminidi',
+            'email' =>'admin@admin.com',
+            'password' => bcrypt('password'),
+        ]);
+        
+        User::create([
+            'name' => 'Kaderid',
+            'username' => 'kaderidi',
+            'email' =>'kader@admin.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        User::create([
+            'name' => 'Pengunjungid',
+            'username' => 'pengunjungidi',
+            'email' =>'pengunjung@admin.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        UserRole::create([
+            'user_id' => 1,
+            'role_id' => 1
+        ]);
+        
+        UserRole::create([
+            'user_id' => 2,
+            'role_id' => 2
+        ]);
+
+        UserRole::create([
+            'user_id' => 3,
+            'role_id' => 3
+>>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
         ]);
     }
 }

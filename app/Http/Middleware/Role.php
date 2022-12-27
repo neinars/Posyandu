@@ -17,20 +17,10 @@ class Role
      */
     public function handle(Request $request, Closure $next, $role)
     {
-        if ($request->user()->role[0]->name ==$role){
+        if(Auth::user()->user_role->role->name === $role) {
             return $next($request);
         }
-        abort(403, 'Dont have an access to this Page!');
-    }
 
-    public function authenticated($request, $user)
-    {
-        if (Auth::user()->role[0]->role_name == 'Admin')
-        return redirect("admin/home");
-
-        elseif (Auth::user()->role[0]->role_name == 'Kader')
-        return redirect("kader/home");
-
-        else return redirect("pengunjung/home");
+        abort(403, 'Anda tidak memiliki akses kehalaman ini');
     }
 }

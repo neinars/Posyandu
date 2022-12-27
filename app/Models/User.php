@@ -43,11 +43,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Pengunjung(){
+    //Relasi 
+
+    public function user_role(){
+        return $this->hasOne(UserRole::class);
+    }
+    public function pengunjung(){
         return $this->hasOne(Pengunjung::class);
     }
-    public function Role(){
-        return $this->belongsToMany(Role::class);
+    public function pemeriksaans(){
+        return $this->hasMany(Pemeriksaan::class);
     }
-
+    public function balita(){
+        return $this->hasOne(Balita::class);
+    }
+    public function laporans(){
+        return $this->hasMany(Laporan::class);
+    }
 }

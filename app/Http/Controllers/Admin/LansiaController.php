@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Lansia;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class LansiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Lansia $lansia)
     {
         //
     }
@@ -52,10 +52,10 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Lansia $lansia)
     {
         //
     }
@@ -64,10 +64,10 @@ class DashboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Lansia $lansia)
     {
         //
     }
@@ -75,10 +75,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Lansia $lansia)
     {
         //
     }
