@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('dashboard', [
+    return view('admin.dashboard', [
         "title" => "Dashboard"
     ]);
 });
@@ -22,11 +22,6 @@ Route::get('/', function () {
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('home');
 
-<<<<<<< HEAD
-Auth::routes();Route::middleware(['auth', 'role:Admin'])->prefix('masyarakat')->group(function () {
-Route::get('/balita', [App\Http\Controllers\Admin\BalitaController::class, 'index'])->name('balita.index');
-});
-=======
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route by Role = ADMIN 
@@ -43,4 +38,3 @@ Route::middleware(['auth', 'Role:Kader'])->prefix('kader')->group(function(){
 Route::middleware(['auth', 'Role:Pengunjung'])->prefix('pengunjung')->group(function(){
     Route::get('/home', [App\Http\Controllers\Pengunjung\HomeController::class, 'index'])->name('pengunjung.home');
 });
->>>>>>> 850f8c5980aa80b8d463b62d1a94e170f9804ae3
