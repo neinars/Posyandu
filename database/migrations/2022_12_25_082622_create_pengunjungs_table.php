@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('phone');
             $table->enum('jk', ['Laki-laki', 'Perempuan']);
             $table->string('age');
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->unique();
             $table->timestamps();
         });
     }

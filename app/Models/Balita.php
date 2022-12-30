@@ -10,7 +10,6 @@ class Balita extends Model
     use HasFactory;
 
     protected $fillable =[
-        'user_id',
         'nama_balita',
         'tl_balita',
         'jk',

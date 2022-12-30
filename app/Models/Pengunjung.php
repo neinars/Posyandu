@@ -11,6 +11,7 @@ class Pengunjung extends Model
 
     protected $fillable =[
         'name',
+        'username',
         'NIK',
         'address',
         'phone',
